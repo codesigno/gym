@@ -1,18 +1,21 @@
 .contact-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  min-height: 88vh;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-container form {
-    width: 25rem;
-    display: flex;
-    flex-direction: column;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
 
 }
 
-.form-control, textarea {
+.form-control,
+textarea {
   max-width: 400px;
   margin: 0.2rem 0rem;
   padding: 0.5rem;
@@ -35,7 +38,7 @@
   cursor: pointer;
 }
 
-.contact-container  .button {
+.contact-container .button {
   width: 400px;
   height: 35px;
   color: #000;
@@ -49,18 +52,22 @@
   letter-spacing: 2px;
 }
 
-.contact-container  .button:hover {
+.contact-container .button:hover {
   transform: translate3d(0px, -29px, 0px);
 }
 
 .contact-container button:hover {
-    background-color: #f17828;
+  background-color: #f17828;
 }
 
 
 /* media query */
-@media only screen and (max-width: 450px) { 
-    .contact-container form {
-        width: 17rem;
-    }
+@media only screen and (max-width: 450px) {
+  .contact-container {
+    margin: 0;
+  }
+
+  .contact-container form {
+    width: 17rem;
+  }
 }
