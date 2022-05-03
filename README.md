@@ -1,8 +1,10 @@
 # GYM 
 
-## SPA Website
+## React Landing Page
 
-This responsive website is built with **React JS** and **SASS**.
+This responsive website is built with **React JS** and deployed on **GitHub Pages**.
+
+<br/>
 
 ![project screenshot](./public/assets/screenshot.png)
 
