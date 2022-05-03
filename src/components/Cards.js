@@ -9,15 +9,11 @@ export default function Cards() {
     return (
         <div className="cards">
             <h2>Checkout our Gym Offers</h2>
-            <div className='cards__container'>
-                <div className='cards__wrapper'>
-                    <ul className='cards__items'>
-                        {gymData.map((data, i) =>
-                            <CardItem key={i} data={data} />
-                        )}
-                    </ul>
-                </div>
-            </div>
+            <ul className='cards__items'>
+                {gymData.map((data, i) =>
+                    <CardItem key={i} data={data} />
+                )}
+            </ul>
         </div>
     )
 }
