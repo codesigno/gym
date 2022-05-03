@@ -82,10 +82,11 @@ h3 {
 
 .btn-trial {
     margin: 1.5rem auto;
+    background: none;
 }
 
 /* media query */
-@media only screen and (max-width: 780px) { 
+@media only screen and (max-width: 780px) {
     .membership-boxes {
         flex-direction: column;
         justify-content: center;

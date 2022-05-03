@@ -1,27 +1,46 @@
-.signup-login {
+.sign-up-login {
     max-width: 55vw;
     min-height: 75vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding: 1rem;
-    background-image: url("../assets/men-figur.png");
-    background-repeat: no-repeat;
 }
 
-.signup-login h2 {
+.connect {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.connect h2 {
+    padding: 0.2rem 0;
+    background-color: #000;
+    border-radius: 5px;
+}
+
+.sign-up-login h2 {
     margin: 0;
     color: #f17828;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
 }
 
 .options {
     width: 25rem;
     display: flex;
     justify-content: space-between;
-    margin: 2rem 0 0.3rem 0;
+    margin: 1.5rem 0;
     border: 1px solid #000;
     border-radius: 3px;
     background-color: #f17828;
@@ -48,6 +67,11 @@
     font-weight: bold;
 }
 
+.sign-up-login-form {
+    display: flex;
+    flex-direction: column;
+}
+
 form {
     width: 25rem;
     display: flex;
@@ -55,36 +79,64 @@ form {
 }
 
 form input {
-  margin: 0.2rem 0rem;
-  padding: 0.5rem;
-  letter-spacing: 1px;
-  color: #fff;
-  background-color: #111;
-  border: 1px solid #f17828;
-  border-radius: 5px;
+    margin: 0.2rem 0rem;
+    padding: 0.7rem;
+    letter-spacing: 1px;
+    color: #fff;
+    background-color: rgba(17, 17, 17, 0.884);
+    border: 1px solid #f17828;
+    border-radius: 5px;
+}
+
+form input:active,
+form input:focus {
+    background-color: rgba(17, 17, 17, 0.884);
 }
 
 form button {
     border: 1px solid #000;
     border-radius: 3px;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     padding: 0.5rem 0;
     font-size: 1.1em;
     color: #000;
     cursor: pointer;
-}
-
-form button:hover {
     background-color: #f17828;
 }
 
-.signup-login  footer {
-    width: 100vw;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-    background-color: #000;
-    color: #fff;
+form button:hover {
+    background-color: #aa6638;
+}
+
+/* responsive */
+@media only screen and (max-width: 900px) {
+    .sign-up-login {
+        flex-wrap: wrap;
+    }
+
+    .connect {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .connect h2 {
+        width: 90vw;
+    }
+
+    .sign-up-form {
+        width: 90vw;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .options {
+        width: 90vw;
+    }
+
+    form {
+        width: 90vw;
+    }
 }

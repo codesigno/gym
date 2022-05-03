@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import gymMan from '../assets/men-figur.png'
 import '../style/signupLogin.css'
 
 export default function SignUp() {
@@ -9,32 +10,36 @@ export default function SignUp() {
     }
 
     return (
-        <div className="signup-login">
-            <h2 className>Connect</h2>
-
-            <div className="options">
-                <h3 onClick={toggleOption} className={!isRegister && "active"}>Sign Up</h3>
-                <h3 onClick={toggleOption} className={isRegister && "active"}>Login</h3>
+        <div className="sign-up-login">
+            <div className="connect">
+                <img src={gymMan} alt="gym man" width="300" />
+                <h2 className>
+                    {!isRegister && "active" ?
+                        <p>Sign Up</p>
+                        : <p>Login</p>
+                    }
+                </h2>
             </div>
-
-            {!isRegister ? (
-                <form>
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <button type="submit">Signup</button>
-                </form>
-            ) : (
+            <div className="sign-up-form">
+                <div className="options">
+                    <h3 onClick={toggleOption} className={!isRegister && "active"}>Sign Up</h3>
+                    <h3 onClick={toggleOption} className={isRegister && "active"}>Login</h3>
+                </div>
+                {!isRegister ? (
+                    <form>
+                        <input type="text" placeholder="Name" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <button type="submit">Signup</button>
+                    </form>
+                ) : (
                     <form>
                         <input type="email" placeholder="Email" />
                         <input type="password" placeholder="Password" />
                         <button type="submit">Login</button>
                     </form>
-                )
-            }
-            <footer>
-                <p> <i className="fas fa-dumbbell"></i> GYM</p>
-            </footer>
+                )}
+            </div>
         </div>
     )
 }
